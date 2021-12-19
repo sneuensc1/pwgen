@@ -1,5 +1,9 @@
 // Assignment code here
 
+
+
+
+
 var generatePassword = function() {
     window.alert("password1");
     
@@ -27,25 +31,28 @@ var generatePassword = function() {
 
 
 //function to generate a loop
-var pickCharacters = function() {
+ = function() {
     
-
-    for(var i = 0; i < specialCharacter.length; i++)
 
 return value;
 }
+}
 
+
+
+
+//arrays for the characters for the password
 var specialCharacter = [
-    !, #, $, %, &, (, ), -, +, =, ?
-]
+    "!", "#", "$", "%", "&", "(", ")", "-", "+", "=", "?"
+];
 
 var capitalLetter = [
-    A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z]
-]
+    "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z]
+];
 
 var lowerCaseLetter = [
-    a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z]
-]
+    "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
+];
 
 
 
