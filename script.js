@@ -6,13 +6,14 @@
 
 var generatePassword = function() {
 
-    
-    while() {
+    var numCharacters
+
+    while(true) {
         //Ask how many characters between 8 and 128 they would like
         var numCharacters = window.prompt("How many characters would you like your password to be? Enter a number between 8 and 128.");
-        var characters = localStorage.getItem("howmany");
-        if (characters >= 8 && characters <= 128)
-        break;
+        if (numCharacters >= 8 && numCharacters <= 128) {
+            break;
+        }
     }
 
 
