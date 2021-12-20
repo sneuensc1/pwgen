@@ -51,36 +51,36 @@ var generatePassword = function() {
     console.log("used a number " + numSet);
 
     //arrays for the characters for the password
-    specialCharacter = [
+    var specialCharacterList = [
         "!", "#", "$", "%", "&", "(", ")", "-", "+", "=", "?"
-]   ;
+    ];
 
-    capitalLetter = [
+    var capitalLetterList = [
         "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
     ];
 
-    lowerCaseLetter = [
+    var lowerCaseLetterList = [
         "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
     ];
 
-    numSet = [
+    var numSetList = [
         "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"
     ];
 
     //concatenate the arrays
     var possibleChars;
     if(specialCharacter === "yes") {
-        possibleChars = lowerCaseLetter.concat(specialCharacter);
+        possibleChars = lowerCaseLetterList.concat(specialCharacterList);
         console.log(possibleChars);
     }
     if(capitalLetter === "yes") {
-        possibleChars = lowerCaseLetter.concat(capitalLetter);
+        possibleChars = lowerCaseLetterList.concat(capitalLetterList);
         console.log(possibleChars);
     }
     if(numSet === "yes") {
-        possibleChars = lowerCaseLetter.concat(numSet);
+        possibleChars = lowerCaseLetterList.concat(numSetList);
         console.log(possibleChars);
-}
+    }
 
 }
 
