@@ -1,10 +1,7 @@
-// Assignment code here
-
-
-
-
-
+//function to generate a password
 var generatePassword = function() {
+
+    
     var numCharacters;
     //Ask how many characters between 8 and 128 they would like
     while(true) {
@@ -38,28 +35,52 @@ var generatePassword = function() {
             break;
         }
     }
+    //ask if they want to use a number
+    var numSet;
+    while(true) {
+        numSet = window.prompt("Would you like to use a number?");
+        if(numSet === "yes" || numSet === "no") {
+            break;
+        }
+    }
 
 console.log("password length " + numCharacters);
 console.log("used special character " + specialCharacter);
 console.log("used capital letters " + capitalLetter);
 console.log("used lower case letter " + lowerCaseLetter);
-}
+console.log("used a number " + numSet);
 
 //arrays for the characters for the password
-var specialCharacter = [
+specialCharacter = [
     "!", "#", "$", "%", "&", "(", ")", "-", "+", "=", "?"
 ];
 
-var capitalLetter = [
+capitalLetter = [
     "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
 ];
 
-var lowerCaseLetter = [
+lowerCaseLetter = [
     "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
 ];
 
+numSet = [
+    "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"
+];
+
+//concatenate the arrays
+var possibleChars
+if(specialCharacter === yes) {
+    possibleChars = lowerCaseLetter.concat(specialCharacter);
+}
+if(capitalLetter === yes) {
+    possibleChars = lowerCaseLetter.concat(capitalLetter);
+}
+if(numSet === yes) {
+    possibleChars = lowerCaseLetter.concat(numSet);
+}
 
 
+}
 
 
 
