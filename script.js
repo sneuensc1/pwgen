@@ -73,9 +73,14 @@ var generatePassword = function() {
         possibleChars = possibleChars.concat(numSetList);
         console.log(possibleChars);
     }
-
+    //loop to choose the characters
+    var passwordCharacters;
+    for(var i = 0; i < numCharacters; i++) {
+        passwordCharacters=""
+        console.log("loop number " + i);
+    }
+    return passwordCharacters;
 }
-
 
 
 // Get references to the #generate element
