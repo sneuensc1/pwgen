@@ -1,3 +1,8 @@
+//add randomizer
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
+
 //function to generate a password
 var generatePassword = function() {
 
@@ -36,11 +41,6 @@ var generatePassword = function() {
         }
     }
 
-    console.log("password length " + numCharacters);
-    console.log("used special character " + specialCharacter);
-    console.log("used capital letters " + capitalLetter);
-    console.log("used a number " + numSet);
-
     //arrays for the characters for the password
     var specialCharacterList = [
         "!", "#", "$", "%", "&", "(", ")", "-", "+", "=", "?"
@@ -63,29 +63,23 @@ var generatePassword = function() {
 
     if(specialCharacter === "yes") {
         possibleChars = possibleChars.concat(specialCharacterList);
-        console.log(possibleChars);
     }
     if(capitalLetter === "yes") {
         possibleChars = possibleChars.concat(capitalLetterList);
-        console.log(possibleChars);
     }
     if(numSet === "yes") {
         possibleChars = possibleChars.concat(numSetList);
-        console.log(possibleChars);
     }
     //loop to choose the characters
     var passwordCharacters = "";
     for(var i = 0; i < numCharacters; i++) {
-        console.log("loop number " + i);
-        passwordCharacters = passwordCharacters.concat(possibleChars[i]);
+        passwordCharacters = passwordCharacters.concat(possibleChars[getRandomInt(possibleChars.length)]);
     }
     return passwordCharacters;
 }
 
-
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
-
 
 // Write password to the #password input
 function writePassword() {
@@ -93,7 +87,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
