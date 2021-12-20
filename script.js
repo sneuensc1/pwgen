@@ -5,12 +5,18 @@
 
 
 var generatePassword = function() {
-    window.alert("password1");
+
     
-    
-    //Ask how many characters between 8 and 128 they would like
-    var numCharacters = window.prompt("How many characters would you like your password to be? Enter a number between 8 and 128.");
-    //conditional recall
+    while() {
+        //Ask how many characters between 8 and 128 they would like
+        var numCharacters = window.prompt("How many characters would you like your password to be? Enter a number between 8 and 128.");
+        var characters = localStorage.getItem("howmany");
+        if (characters >= 8 && characters <= 128)
+        break;
+    }
+
+
+
 
     //Ask if they would like a special character
     var specialCharacter = window.prompt("Would you like to use a special character?");
@@ -18,11 +24,13 @@ var generatePassword = function() {
     if(specialCharacter === null || specialCharacter === 0) {
         window.alert("You need to provide a valid answer, please try again!");
     }
+    //ask if they would like a capital letter
     var capitalLetter = window.prompt("Would you like to use a capital letter?");
     //conditional recall
     if(capitalLetter === null || capitalLetter === 0) {
         window.alert("You need to provide a valid answer, please try again!");
     }
+    //ask if they would like a lower case letter
     var lowerCaseLetter = window.prompt("Would you like to use a lower case letter?");
     //conditional recall
     if(lowerCaseLetter === null || lowerCaseLetter === 0) {
@@ -31,12 +39,6 @@ var generatePassword = function() {
 
 
 //function to generate a loop
- = function() {
-    
-
-return value;
-}
-}
 
 
 
@@ -67,7 +69,7 @@ var randomNumber = function(min, max) {
 
 
 
-}
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
