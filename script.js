@@ -11,12 +11,11 @@ var generatePassword = function() {
     while(true) {
         //Ask how many characters between 8 and 128 they would like
         var numCharacters = window.prompt("How many characters would you like your password to be? Enter a number between 8 and 128.");
+        numCharacters = parseInt(numCharacters)
         if (numCharacters >= 8 && numCharacters <= 128) {
             break;
         }
     }
-
-
 
 
     //Ask if they would like a special character
@@ -50,7 +49,7 @@ var specialCharacter = [
 ];
 
 var capitalLetter = [
-    "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z]
+    "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
 ];
 
 var lowerCaseLetter = [
@@ -85,4 +84,4 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword);}
