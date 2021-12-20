@@ -27,14 +27,6 @@ var generatePassword = function() {
             break;
         }
     }  
-    //ask if they would like a lower case letter
-    var lowerCaseLetter;
-    while(true) {
-        lowerCaseLetter = window.prompt("Would you like to use a lower case letter?");
-        if(lowerCaseLetter === "yes" || lowerCaseLetter === "no") {
-            break;
-        }
-    }
     //ask if they want to use a number
     var numSet;
     while(true) {
@@ -47,7 +39,6 @@ var generatePassword = function() {
     console.log("password length " + numCharacters);
     console.log("used special character " + specialCharacter);
     console.log("used capital letters " + capitalLetter);
-    console.log("used lower case letter " + lowerCaseLetter);
     console.log("used a number " + numSet);
 
     //arrays for the characters for the password
@@ -68,17 +59,18 @@ var generatePassword = function() {
     ];
 
     //concatenate the arrays
-    var possibleChars;
+    var possibleChars = [].concat(lowerCaseLetterList);
+
     if(specialCharacter === "yes") {
-        possibleChars = lowerCaseLetterList.concat(specialCharacterList);
+        possibleChars = possibleChars.concat(specialCharacterList);
         console.log(possibleChars);
     }
     if(capitalLetter === "yes") {
-        possibleChars = lowerCaseLetterList.concat(capitalLetterList);
+        possibleChars = possibleChars.concat(capitalLetterList);
         console.log(possibleChars);
     }
     if(numSet === "yes") {
-        possibleChars = lowerCaseLetterList.concat(numSetList);
+        possibleChars = possibleChars.concat(numSetList);
         console.log(possibleChars);
     }
 
