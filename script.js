@@ -5,45 +5,45 @@
 
 
 var generatePassword = function() {
-    var numCharacters
+    var numCharacters;
     //Ask how many characters between 8 and 128 they would like
     while(true) {
-        var numCharacters = window.prompt("How many characters would you like your password to be? Enter a number between 8 and 128.");
+        numCharacters = window.prompt("How many characters would you like your password to be? Enter a number between 8 and 128.");
         numCharacters = parseInt(numCharacters)
         if (numCharacters >= 8 && numCharacters <= 128) {
             break;
         }
     }
     //Ask if they would like a special character
-    var specialCharacter
+    var specialCharacter;
     while(true) {
-        var specialCharacter = window.prompt("Would you like to use a special character?");
+        specialCharacter = window.prompt("Would you like to use a special character?");
         if(specialCharacter === "yes" || specialCharacter === "no") {
             break;
         }
     }
     //ask if they would like a capital letter
-    var capitalLetter
+    var capitalLetter;
     while(true) {
-        var capitalLetter = window.prompt("Would you like to use a capital letter?");
+        capitalLetter = window.prompt("Would you like to use a capital letter?");
         if(capitalLetter === "yes" || capitalLetter === "no") {
             break;
         }
     }  
     //ask if they would like a lower case letter
-    var lowerCaseLetter
+    var lowerCaseLetter;
     while(true) {
-        var lowerCaseLetter = window.prompt("Would you like to use a lower case letter?");
+        lowerCaseLetter = window.prompt("Would you like to use a lower case letter?");
         if(lowerCaseLetter === "yes" || lowerCaseLetter === "no") {
             break;
         }
     }
 
+console.log("password length " + numCharacters);
+console.log("used special character " + specialCharacter);
+console.log("used capital letters " + capitalLetter);
+console.log("used lower case letter " + lowerCaseLetter);
 }
-//function to generate a loop
-
-
-
 
 //arrays for the characters for the password
 var specialCharacter = [
