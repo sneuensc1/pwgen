@@ -74,10 +74,10 @@ var generatePassword = function() {
         console.log(possibleChars);
     }
     //loop to choose the characters
-    var passwordCharacters;
+    var passwordCharacters = "";
     for(var i = 0; i < numCharacters; i++) {
-        passwordCharacters=""
         console.log("loop number " + i);
+        passwordCharacters = passwordCharacters.concat(possibleChars[i]);
     }
     return passwordCharacters;
 }
